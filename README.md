@@ -46,8 +46,20 @@ Wav -> MP3
 
 ```
 ffmpeg -i input.wav -vn -ar 44100 -ac 2 -ab 192k -f mp3 output.mp3
+
+ffmpeg -i audio.wav -acodec libmp3lame audio.mp3
 ```
 
 > http://stackoverflow.com/questions/3255674/convert-audio-files-to-mp3-using-ffmpeg
 
 > http://www.catswhocode.com/blog/19-ffmpeg-commands-for-all-needs
+
+Convert a video into animated GIF
+
+```
+ffmpeg -i video.mp4 -vf scale=500:-1 -t 10 -r 10 image.gif
+```
+
+> http://www.labnol.org/internet/useful-ffmpeg-commands/28490/
+
+> http://www.tecmint.com/ffmpeg-commands-for-video-audio-and-image-conversion-in-linux/
