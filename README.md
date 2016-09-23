@@ -39,3 +39,15 @@ for f in `ls /usr/bin`; do  echo "$RANDOM $f" ; done | sort -R | head -n1 | cut 
 ```
 
 > http://stackoverflow.com/questions/701505/best-way-to-choose-a-random-file-from-a-directory-in-a-shell-script
+
+## Audio
+
+Wav -> MP3
+
+```
+ffmpeg -i input.wav -vn -ar 44100 -ac 2 -ab 192k -f mp3 output.mp3
+```
+
+> http://stackoverflow.com/questions/3255674/convert-audio-files-to-mp3-using-ffmpeg
+
+> http://www.catswhocode.com/blog/19-ffmpeg-commands-for-all-needs
