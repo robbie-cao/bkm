@@ -15,3 +15,5 @@ https://github.com/[user]/[repo]/watchers
 ```
 
 > http://webapps.stackexchange.com/questions/41799/how-can-i-list-people-who-have-starred-my-github-repository
+
+Trending in open source: https://github.com/trending
