@@ -28,18 +28,36 @@ Generate table of content:
 <div id="category"></div>
 ```
 
-Pagebreak
+Pagebreak:
 
 ```
 <div style="page-break-after: always;"></div>
 ```
 
-Image center alignment and width/height
+Image in width/height:
 
 ```
 <center>
 <img src="images/drawing.png" alt="Drawing" style="width: 600px;"/>
 </center>
+```
+
+Centering an image:
+
+```
+<p align="center">
+  <img src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png" width="256" title="Github Logo">
+</p>
+
+-or-
+
+<center>![](image.png)
+```
+
+Text in color
+
+```
+<span style="color:red">Text in red color</span>
 ```
 
 ## GitHub
