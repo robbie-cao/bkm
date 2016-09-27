@@ -40,6 +40,67 @@ for f in `ls /usr/bin`; do  echo "$RANDOM $f" ; done | sort -R | head -n1 | cut 
 
 > http://stackoverflow.com/questions/701505/best-way-to-choose-a-random-file-from-a-directory-in-a-shell-script
 
+Simulate typing:
+
+```
+echo "You can simulate on-screen typing just like in the movies" | pv -qL 10
+```
+
+Monitor progress of a command:
+
+```
+pv access.log | gzip > access.log.gz
+```
+
+Live ssh network throughput test:
+
+```
+yes | pv | ssh $host "cat > /dev/null"
+
+pv /dev/zero|ssh $host 'cat > /dev/null'
+```
+
+Time how fast the computer reads from `/dev/zero`:
+
+```
+pv /dev/zero > /dev/null
+```
+
+Copy a file using pv and watch its progress:
+
+```
+pv sourcefile > destfile
+```
+
+> https://blog.urfix.com/9-tricks-pv-pipe-viewer/
+
+Transfer a directory from A to B and monitor progress:
+
+```
+# on computer A, with IP address 192.168.1.100
+$ tar -cf - /path/to/dir | pv | nc -l -p 6666 -q 5
+# on computer B
+$ nc 192.168.1.100 6666 | pv | tar -xf -
+```
+
+> http://www.catonmat.net/blog/unix-utilities-pipe-viewer/
+
+Using `pv` and `dialog` together to create a dialog progress:
+
+```
+tar -czf - ./Documents/ | (pv -n > backup.tgz) 2>&1 | dialog --gauge "Progress" 10 70
+```
+
+> http://www.tecmint.com/monitor-copy-backup-tar-progress-in-linux-using-pv-command/
+
+Extract tar ball and show progress using the dialog command:
+
+```
+(pv -n backup.tar.gz | tar xzf - -C path/to/data ) 2>&1 | dialog --gauge "Running tar, please wait..." 10 70 0
+```
+
+> http://www.cyberciti.biz/open-source/command-line-hacks/pv-command-examples/
+
 ## Audio
 
 Wav -> MP3
