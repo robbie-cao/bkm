@@ -200,4 +200,8 @@ convert tmp/16.png tmp/32.png tmp/48.png tmp/128.png tmp/256.png  icon.ico
 -flatten -colors 256 output/favicon.ico 
 
 ffmpeg -i img.png img.ico
+ffmpeg -i input.jpg -vf scale=320:240 output_320x240.png
+ffmpeg -i input.jpg -vf scale=320:-1 output_320.png
 ```
+
+> https://trac.ffmpeg.org/wiki/Scaling%20(resizing)%20with%20ffmpeg
