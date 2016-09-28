@@ -184,3 +184,20 @@ ffmpeg -i video.mp4 -vf scale=500:-1 -t 10 -r 10 image.gif
 > http://www.labnol.org/internet/useful-ffmpeg-commands/28490/
 
 > http://www.tecmint.com/ffmpeg-commands-for-video-audio-and-image-conversion-in-linux/
+
+## Imaging
+
+Image conversion:
+
+```
+convert icon.svg -scale 32 tmp/32.png
+convert tmp/16.png tmp/32.png tmp/48.png tmp/128.png tmp/256.png  icon.ico
+
+/usr/bin/convert -resize x16 -gravity center -crop 16x16+0+0 input.jpg \
+-transparent white -colors 256 output/favicon.ico 
+
+/usr/bin/convert -resize x16 -gravity center -crop 16x16+0+0 input.png \
+-flatten -colors 256 output/favicon.ico 
+
+ffmpeg -i img.png img.ico
+```
