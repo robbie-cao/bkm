@@ -94,6 +94,55 @@ Most stars: https://github.com/search?q=stars:%3E1&s=stars&type=Repositories
 
 ## Shell
 
+### Batch Renaming
+
+Rename '.png.jpg' to '.jpg':
+
+```
+rename '.png.jpg' '.jpg' ./*
+
+-or-
+
+cd dir/with/messedup/files
+
+for file in *.png.jpg; do
+	mv "$file" "${file%.png.jpg}.jpg"
+done
+
+-or-
+
+for fn in *.jpg; do convert "$fn" `echo $fn | sed 's/jpg$/png/'`; done
+
+-or-
+
+ls *.jpg | xargs -I{} convert "{}" `echo {} | sed 's/jpg$/png/'`
+```
+
+This can be also be done with `xargs` and `sed` to change the file extension:
+
+```
+ls | grep \.png$ | sed 'p;s/\.png/\.jpg/' | xargs -n2 mv
+
+-or-
+
+find . -name "*.png" -print0 | sed 'p;s/\.png/\.jpg/' | xargs -0 -n2 mv
+
+-or-
+
+ls *.svg.png | xargs basename -s .svg.png | xargs -I {} mv {}.svg.png {}.png
+```
+
+If you have files in subdirectories that you want converted, then you can pipe find to a while read loop:
+
+```
+find . -type f -name '*.png' |
+while read file; do
+	convert "$file" -resize "${file%.png}.jpg"
+done
+```
+
+> http://stackoverflow.com/questions/10972002/batch-renaming-files-in-command-line-and-xargs
+
 ### Random File
 
 Choose a random file from a directory in a shell script:
