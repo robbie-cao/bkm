@@ -2,7 +2,7 @@
 
 ## Markdown
 
-Generate table of content:
+### Table of Content
 
 ```
 <link rel="stylesheet" href="http://yandex.st/highlightjs/6.2/styles/googlecode.min.css">
@@ -28,13 +28,13 @@ Generate table of content:
 <div id="category"></div>
 ```
 
-Pagebreak:
+### Page Break
 
 ```
 <div style="page-break-after: always;"></div>
 ```
 
-Image in width/height:
+### Image in Width/Height
 
 ```
 <center>
@@ -42,7 +42,7 @@ Image in width/height:
 </center>
 ```
 
-Centering an image:
+### Centering an Image
 
 ```
 <p align="center">
@@ -54,7 +54,7 @@ Centering an image:
 <center>![](image.png)
 ```
 
-Text in color
+### Text in Color
 
 ```
 <span style="color:red">Text in red color</span>
@@ -62,11 +62,15 @@ Text in color
 
 ## GitHub
 
+### Starts
+
 To get a list of users that have stared a repository you can append /stargazers to the url of the repository:
 
 ```
 https://github.com/[user]/[repo]/stargazers
 ```
+
+### Watchers
 
 You can also see who the watchers:
 
@@ -76,7 +80,11 @@ https://github.com/[user]/[repo]/watchers
 
 > http://webapps.stackexchange.com/questions/41799/how-can-i-list-people-who-have-starred-my-github-repository
 
+### Trending
+
 Trending in open source: https://github.com/trending
+
+### Hot Projects
 
 Most forks: https://github.com/search?o=desc&q=stars:%3E1&s=forks&type=Repositories
 
@@ -85,6 +93,8 @@ Most stars: https://github.com/search?q=stars:%3E1&s=stars&type=Repositories
 > http://stackoverflow.com/questions/19855552/how-to-find-out-the-most-popular-repositories-on-github
 
 ## Shell
+
+### Random File
 
 Choose a random file from a directory in a shell script:
 
@@ -99,6 +109,8 @@ for f in `ls /usr/bin`; do  echo "$RANDOM $f" ; done | sort -R | head -n1 | cut 
 ```
 
 > http://stackoverflow.com/questions/701505/best-way-to-choose-a-random-file-from-a-directory-in-a-shell-script
+
+### `pv`
 
 Simulate typing:
 
@@ -126,7 +138,7 @@ Time how fast the computer reads from `/dev/zero`:
 pv /dev/zero > /dev/null
 ```
 
-Copy a file using pv and watch its progress:
+Copy a file using `pv` and watch its progress:
 
 ```
 pv sourcefile > destfile
@@ -194,10 +206,10 @@ convert icon.svg -scale 32 tmp/32.png
 convert tmp/16.png tmp/32.png tmp/48.png tmp/128.png tmp/256.png  icon.ico
 
 /usr/bin/convert -resize x16 -gravity center -crop 16x16+0+0 input.jpg \
--transparent white -colors 256 output/favicon.ico 
+-transparent white -colors 256 output/favicon.ico
 
 /usr/bin/convert -resize x16 -gravity center -crop 16x16+0+0 input.png \
--flatten -colors 256 output/favicon.ico 
+-flatten -colors 256 output/favicon.ico
 
 ffmpeg -i img.png img.ico
 ffmpeg -i input.jpg -vf scale=320:240 output_320x240.png
