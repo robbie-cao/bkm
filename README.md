@@ -222,6 +222,24 @@ Extract tar ball and show progress using the dialog command:
 
 > http://www.cyberciti.biz/open-source/command-line-hacks/pv-command-examples/
 
+### SSH
+
+Piping the microphone from one machine to the speakers of another:
+
+```
+dd if=/dev/dsp | ssh -C user@host dd of=/dev/dsp
+
+-or-
+
+dd if=/dev/dsp | ssh -c arcfour -C user@host dd of=/dev/dsp
+```
+
+Tunnel audio chat over ssh:
+
+```
+arecord -f cd -t raw | oggenc - -r | ssh user@host mplayer -
+```
+
 ## Audio
 
 Wav -> MP3
