@@ -62,6 +62,16 @@
 
 ## GitHub
 
+### Gravizo - Graphviz, UMLGraph or PlantUML for README
+
+A simple way of describing graphs and include it easily in your web for free, blog, markdown page, github, and any location where remote images can be showed.
+
+Gravizo uses Graphviz to render graphs. It supports DOT, PlantUML, UMLGraph syntax and SVG in JSON format. It will include other formats in the future. No javascript, no plugins needed so you can include in any document.
+
+> http://www.gravizo.com
+
+> https://github.com/TLmaK0/gravizo
+
 ### Starts
 
 To get a list of users that have stared a repository you can append /stargazers to the url of the repository:
