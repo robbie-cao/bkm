@@ -378,3 +378,28 @@ ffmpeg -i input.jpg -vf scale=320:-1 output_320.png
 ```
 
 > https://trac.ffmpeg.org/wiki/Scaling%20(resizing)%20with%20ffmpeg
+
+## Web Development
+
+### JavaScript Compressor
+
+<li><a href="http://developer.yahoo.com/yui/compressor/">YUI Compressor</a></li>
+<li><a href="http://code.google.com/closure/compiler/">Google Closure Compiler</a></li>
+<li><a href="http://www.dojotoolkit.org/">Dojo ToolKit</a>'s ShrinkSafe compiler</li>
+<li><a href="http://www.crockford.com/javascript/jsmin.html">JSMin</a></li>
+<li><a href="http://github.com/mishoo/UglifyJS">UglifyJS</a></li>
+
+> http://stackoverflow.com/questions/599911/what-do-you-use-to-minimize-and-compress-javascript-libraries
+
+> http://stackoverflow.com/questions/28932/best-javascript-compressor
+
+### Tool to Unminify / Decompress JavaScript
+
+- [JSBeautifier](http://jsbeautifier.org/)
+- [Javascript Formatter](http://www.blackbeltcoder.com/Resources/JSFormatter.aspx)
+- [UNMINIFY](http://unminify.com) - Unminify JS, CSS and HTML Code
+
+> http://stackoverflow.com/questions/822119/tool-to-unminify-decompress-javascript
+
+## Reference
+
