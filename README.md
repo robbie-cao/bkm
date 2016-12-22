@@ -401,5 +401,79 @@ ffmpeg -i input.jpg -vf scale=320:-1 output_320.png
 
 > http://stackoverflow.com/questions/822119/tool-to-unminify-decompress-javascript
 
+### Start a Web Server in Any Folder
+
+#### Python
+
+```shell
+$ python -m SimpleHTTPServer 8080
+```
+
+Replace `8080` with another number if you want it to listen on a different port.
+
+For ports < 1024 it needs to run with root privileges.
+
+The python 3.x equivalent of this is:
+
+```shell
+$ python3 -m http.server
+```
+
+
+#### PHP
+
+```shell
+$ php -S 0.0.0.0:8080
+```
+
+#### Ruby
+
+Without `gem`
+
+```shell
+$ ruby -run -e httpd . -p8080
+```
+
+With `serve`
+
+```shell
+$ gem install serve
+$ serve 8080
+```
+
+#### Node.js
+
+Use `Connect` and `ServeStatic` with `Node.js`:
+
+1. Install connect and serve-static with NPM
+
+   ```shell
+   $ npm install connect serve-static
+   ```
+
+2. Create server.js file with this content:
+
+   ```shell
+   var connect = require('connect');
+   var serveStatic = require('serve-static');
+   connect().use(serveStatic(__dirname)).listen(8080, function(){
+       console.log('Server running on 8080...');
+   });
+   ```
+
+3. Run with Node.js
+
+   ```shell
+   $ node server.js
+   ```
+
+Simplest Node.js server:
+
+```shell
+$ npm install http-server -g
+$ http-server
+```
+
+
 ## Reference
 
