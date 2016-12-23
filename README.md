@@ -65,6 +65,19 @@
 <span style="color:red">Text in red color</span>
 ```
 
+## TeX / LaTeX
+
+```
+# compile
+latex foo.tex
+# display on screen with X11
+xdvi foo.dvi
+# convert dvi to postscript
+dvips -Pcmz foo.dvi foo.ps
+# convert dvi to pdf
+dvipdf foo.dvi
+```
+
 ## GitHub
 
 ### Gravizo - Graphviz, UMLGraph or PlantUML for README
