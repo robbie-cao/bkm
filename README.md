@@ -117,6 +117,12 @@ Example:
 $$`
 ```
 
+> http://stackoverflow.com/questions/2188884/how-can-i-mix-latex-in-with-markdown
+
+> https://github.com/github/markup/issues/274
+
+> http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference
+
 ## TeX / LaTeX
 
 ```
