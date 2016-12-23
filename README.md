@@ -65,7 +65,9 @@
 <span style="color:red">Text in red color</span>
 ```
 
-### Rendering LaTeX Math with MathJax
+### Support LaTeX Math
+
+#### Rendering with MathJax
 
 ```
 <style TYPE="text/css">
@@ -122,6 +124,25 @@ $$`
 > https://github.com/github/markup/issues/274
 
 > http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference
+
+#### CodeCogs Equation Editor
+
+```
+<img src="http://latex.codecogs.com/gif.latex?\frac{\partial J}{\partial \theta_k^{(j)}}=\sum_{i:r(i,j)=1}{\big((\theta^{(j)})^Tx^{(i)}-y^{(i,j)}\big)x_k^{(i)}}+\lambda \theta_k^{(j)}" />
+```
+
+<img src="http://latex.codecogs.com/gif.latex?\frac{\partial J}{\partial \theta_k^{(j)}}=\sum_{i:r(i,j)=1}{\big((\theta^{(j)})^Tx^{(i)}-y^{(i,j)}\big)x_k^{(i)}}+\lambda \theta_k^{(j)}" />
+
+```
+![](http://latex.codecogs.com/gif.latex?\\frac{1}{1+sin(x)})
+```
+
+![](http://latex.codecogs.com/gif.latex?\\frac{1}{1+sin(x)})
+
+> https://www.zhihu.com/question/26887527
+
+> http://latex.codecogs.com/
+
 
 ## TeX / LaTeX
 
