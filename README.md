@@ -251,7 +251,7 @@ dvips -Pcmz foo.dvi foo.ps
 dvipdf foo.dvi
 ```
 
-## GitHub
+## Git / GitHub
 
 ### Starts
 
@@ -282,6 +282,37 @@ Most forks: https://github.com/search?o=desc&q=stars:%3E1&s=forks&type=Repositor
 Most stars: https://github.com/search?q=stars:%3E1&s=stars&type=Repositories
 
 > http://stackoverflow.com/questions/19855552/how-to-find-out-the-most-popular-repositories-on-github
+
+### Import CVS Repositories
+
+```
+sudo apt-get install git-cvs
+git cvsimport -v -d :pserver:anonymous@basicsynth.cvs.sourceforge.net:/cvsroot/basicsynth Src
+```
+
+> https://pkp.sfu.ca/wiki/index.php/HOW-TO_import_and_export_to_and_from_Git_and_CVS
+
+> http://www.gromacs.org/Developer_Zone/Git/Migrating_a_CVS_repository_to_GIT
+
+> https://git-scm.com/docs/git-cvsimport
+
+> http://cvs2svn.tigris.org/cvs2git.html
+
+> http://stackoverflow.com/questions/881158/is-there-a-migration-tool-from-cvs-to-git
+
+> http://stackoverflow.com/questions/11362676/how-to-import-and-keep-updated-a-cvs-repository-in-git
+
+
+```
+git cvsimport -v -d :pserver:anonymous@cvs.drupal.org:/cvs/drupal-contrib contributions/modules/module-name
+```
+
+This would login to `cvs.drupal.org using` the CVS's `pserver` login method, provide the username `anonymous` and
+the password (for anonymous access, the password is almost always `anonymous`), set the CVS document root to
+`/cvs/drupal-contrib`, and pull the code located at `contributions/modules/module-name` into the current working
+directory as a git repository.
+
+> https://maymay.net/blog/2008/04/15/how-to-import-cvs-code-repositories-into-git-using-git-cvsimport/
 
 ## Shell
 
