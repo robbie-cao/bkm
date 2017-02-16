@@ -82,5 +82,49 @@ $ ruby -e 'p 20+5/2.0'
 22.5
 ```
 
+## Decimal to Hexadecimal in Shell
+
+```
+$ echo "obase=16; 34" | bc
+# If you want to filter a whole file of integers, one per line:
+$ (echo "obase=16" ; cat file_of_integers) | bc
+
+$ printf "%x\n" 34
+```
+
+> http://stackoverflow.com/questions/378829/convert-decimal-to-hexadecimal-in-unix-shell-script
+
+## Hexadecimal to Decimal in Shell
+
+```
+# with bash:
+$ echo $((16#FF))
+255
+
+# with bc:
+$ echo "ibase=16; FF" | bc
+255
+
+# with perl:
+$ perl -le 'print hex("FF");'
+255
+
+# with printf :
+$ printf "%d\n" 0xFF
+255
+
+# with python:
+$ python -c 'print(int("FF", 16))'
+255
+
+# with ruby:
+$ ruby<<EOF
+p "FF".to_i(16).to_s(10)
+EOF
+"255"
+```
+
+> http://stackoverflow.com/questions/13280131/hexadecimal-to-decimal-in-shell-script
+
 ## Reference
 
